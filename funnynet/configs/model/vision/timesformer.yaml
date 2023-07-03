@@ -1,0 +1,7 @@
+encoder: timesformer
+img_size: 224
+num_classes: 400
+num_frames: 8
+attention_type: "divided_space_time"
+weight_path: ${model.model_dir}/TimeSformer_divST_8x32_224_HowTo100M.pyth
+n_dims: 1536

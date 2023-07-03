@@ -1,0 +1,12 @@
+defaults:
+  - _self_
+  - audio: byol
+  - vision: timesformer
+  - face: lstm
+
+name: avf-timesformer-byol-lstm
+data_dir: ./data/data_en
+
+modalities: ["a", "v", "f"]
+
+

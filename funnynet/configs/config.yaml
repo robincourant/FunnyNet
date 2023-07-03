@@ -1,0 +1,40 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - compnode: 2gpu
+  - model: avf-timesformer-byol-lstm
+  - data: avf-timesformer-byol-lstm
+
+num_epochs: 101
+
+root: ${hydra:runtime.cwd}
+# Experiment timestamp. str
+timestamp: ${now:%Y-%m-%d_%H-%M-%S}
+# Path to folder with outputs and logs
+output_dir: ${root}/outputs
+# Path to folder with data
+data_dir: ${data_dir}
+# Path to folder with pre-trained models
+model_dir: ${root}/models
+# Path to folder checkpointing
+checkpoint_dir: ${root}/checkpoints
+# Path to folder to store results
+result_dir: ${root}/results
+# Name of the experiment is accessed by loggers
+xp_name: null
+# Name of the project is accessed by loggers
+project_name: funnynet
+# Wether to synced the logs or not (WandB)
+log_offline: false
+
+# Seed for random number generators
+seed: 1
+# Disable (or not) python warnings
+ignore_warnings: true
+
+
+hydra:
+  run:
+    dir: ${output_dir}/${model.name}/${timestamp}
+  output_subdir: null

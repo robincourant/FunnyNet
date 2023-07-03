@@ -1,0 +1,12 @@
+defaults:
+  - _self_
+  - audio: byol
+  - vision: timesformer
+  - text: bert
+
+name: avt-timesformer-byol-bert
+data_dir: ./data/data_en
+
+modalities: ["a", "v", "t"]
+
+

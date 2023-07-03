@@ -1,0 +1,3 @@
+encoder: byol
+weight_path: ${model.model_dir}/AudioNTT2020-BYOLA-64x96d2048.pth
+n_dims: 2048

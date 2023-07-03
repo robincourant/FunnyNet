@@ -1,0 +1,4 @@
+resample: 16000
+num_mels: 64
+stats: [-5.4919195, 5.0389895]
+fbank: false

@@ -1,0 +1,4 @@
+num_workers: 4
+num_gpus: 4
+strategy: ddp
+accelerator: gpu

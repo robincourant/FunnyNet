@@ -1,0 +1,4 @@
+num_workers: 4
+num_gpus: 1
+strategy: auto
+accelerator: gpu

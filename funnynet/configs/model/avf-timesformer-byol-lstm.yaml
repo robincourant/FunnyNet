@@ -1,0 +1,22 @@
+defaults:
+  - _self_
+  - audio: byol
+  - vision: timesformer
+  - face: lstm
+
+name: av-timesformer-byol-lstm
+
+model_dir: ./models
+checkpoint: null
+modalities: ["a", "v", "f"]
+
+# ################ projection network #############
+head_type: mlp
+proj_embedding_dim: 512
+
+# ################ loss and optimizer #################
+use_gradnorm: true
+learning_rate: 5e-5
+batch_size: 64
+milestones: [20, 40, 80, 100]
+gamma: 0.5
